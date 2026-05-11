@@ -37,4 +37,16 @@ public class Practice {
             current = current.next;  
         }
     }
+
+    public static int countX(ListNode head) {
+        ListNode current = head; 
+        int counter = 0;
+
+        while (current != null) {
+            if (current.data == 'x') counter++; 
+            current = current.next; 
+        }
+
+        return counter;
+    }
 }
