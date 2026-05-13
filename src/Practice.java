@@ -49,4 +49,26 @@ public class Practice {
 
         return counter;
     }
+    
+    // Remove the node at removeIndex, and return the head of the list
+    // Example: 
+    // e -> t -> k -> y
+    // removeIndex 2
+    // e @ index 0
+    // t
+    public static ListNode removeAt(ListNode head, int removeIndex) {
+        if (removeIndex == 0) {
+            return head.next;
+        }
+
+        ListNode current = head; 
+
+        for (int i = 0; i < removeIndex - 1; i++) {
+            current = current.next; 
+        }
+
+        current = current.next.next; 
+
+        return head; 
+    }
 }
